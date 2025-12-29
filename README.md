@@ -1,33 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Planner Web App
 
-## Getting Started
+A modern, interactive travel planning application built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+## Features
+
+- **Step 1: Travel Dates** - Input your destination, departure date, arrival date/time, and return date
+- **Step 2: Hotels** - Add multiple hotel preferences with amenities selection
+- **Step 3: AI Suggestions** - Get personalized travel itineraries based on your dates and hotels
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Real-time Validation** - Form validation with helpful error messages
+
+## Tech Stack
+
+- **Frontend**: Next.js 16+ with React 19
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **API**: Built-in API routes for itinerary generation
+
+## Running Locally
+
+The development server is running at **http://localhost:3000**
+
+To start it manually:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
+
+1. **Enter Trip Details** - Destination, departure date, arrival date/time, return date
+2. **Select Hotels** - Add hotels with location, price, and amenities
+3. **Get Suggestions** - View your complete personalized travel itinerary
+
+## Project Structure
+
+- `src/app/page.tsx` - Home page
+- `src/components/TravelWizard.tsx` - Main wizard component
+- `src/components/steps/` - Individual form steps
+- `src/app/api/generate-itinerary/route.ts` - API for generating travel plans
+- `src/types/travel.ts` - TypeScript type definitions
+
+## Customization
+
+To integrate real AI suggestions, update `src/app/api/generate-itinerary/route.ts` to call OpenAI, Claude, or another API service.
+
+## Deployment
+
+Deploy to Vercel, Netlify, AWS Amplify, or any Node.js-compatible hosting.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
 ## Deploy on Vercel
 
